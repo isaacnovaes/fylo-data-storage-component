@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Frontend mentor">
+    <meta name="description" content="Clipboard landing page">
+    <meta name="author" content="Isaac Novaes">
+    <title>Fylo Data Storage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="first-item">
+          <a href="#"><img src="/images/logo.svg" alt="Fylo logo"></a>
+          <div class="icons">
+            <a href="#"><img src="/images/icon-document.svg" alt="Document icon"></a>
+            <a href="#"><img src="/images/icon-folder.svg" alt="Folder icon"></a>
+            <a href="#"><img src="/images/icon-upload.svg" alt="Upload icon"></a>
+          </div>
+        </div>
+        <div class="second-item">
+          <div class="data-info">
+            <p>You've used <strong id="showValue1">815 GB</strong> of your storage</p>
+            <input type="range" name="storage-used" min="0" max="1000" value="815" id="slider" disabled>  
+            <div id="progressBar"></div>
+          </div>
+             
+          <div class="data-number">
+            <p><strong id="showValue2">185</strong> GB LEFT</p>
+          </div>  
+        </div>
+      </section> 
+    </main> 
+    <script>
+      var slider = document.getElementById("slider");
+      var progressBar = document.getElementById("progressBar");
+      progressBar.style.width = .081*slider.value + "%";
+    </script>
+  
+  </body>
+</html>
