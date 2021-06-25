@@ -84,8 +84,8 @@ main {
 
                     &::-webkit-slider-thumb {
                         -webkit-appearance: none;
-                        height: 15px;
-                        width: 15px;
+                        height: 20px;
+                        width: 20px;
                         cursor: pointer;    
                         background-color: white; 
                         border-radius: 10px;  
@@ -96,12 +96,11 @@ main {
                     }
                 }
                 #progressBar {
-                    width: 1%;
                     height:20px;                    
                     border-radius: 10px; 
                     background: linear-gradient(to right, $first-gradient,$second-gradient);
                     border-radius: 10px;
-                    transform: translate(39px,-40px);
+                    transform: translate(39px,-39px);
                     z-index: 1;                  
                 }
             

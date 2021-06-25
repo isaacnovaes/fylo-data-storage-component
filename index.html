@@ -25,7 +25,7 @@
         <div class="second-item">
           <div class="data-info">
             <p>You've used <strong id="showValue1">815 GB</strong> of your storage</p>
-            <input type="range" name="storage-used" min="0" max="1000" value="815" id="slider" disabled>  
+            <input type="range" name="storage-used" min="0" max="1000" value="815" id="slider">  
             <div id="progressBar"></div>
           </div>
              
@@ -38,7 +38,17 @@
     <script>
       var slider = document.getElementById("slider");
       var progressBar = document.getElementById("progressBar");
-      progressBar.style.width = .081*slider.value + "%";
+      progressBar.style.width = .082*slider.value + "%";
+      var showValue1 = document.getElementById("showValue1");
+      var showValue2 = document.getElementById("showValue2");
+
+      slider.oninput = function () {
+
+        showValue1.innerHTML = slider.value;
+        showValue2.innerHTML = 1000-slider.value;
+        progressBar.style.width = slider.value*.083 + .05 + "%" ;
+        
+      }
     </script>
   
   </body>

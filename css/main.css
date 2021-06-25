@@ -189,8 +189,8 @@ main section.container div.second-item div.data-info input[type=range] {
 
 main section.container div.second-item div.data-info input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
   background-color: white;
   border-radius: 10px;
@@ -199,14 +199,13 @@ main section.container div.second-item div.data-info input[type=range]::-webkit-
 }
 
 main section.container div.second-item div.data-info #progressBar {
-  width: 1%;
   height: 20px;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
   background: linear-gradient(to right, #ffa399, #ff4d97);
   border-radius: 10px;
-  -webkit-transform: translate(39px, -40px);
-          transform: translate(39px, -40px);
+  -webkit-transform: translate(39px, -39px);
+          transform: translate(39px, -39px);
   z-index: 1;
 }
 
@@ -235,13 +234,44 @@ main section.container div.second-item div.data-number p strong {
 }
 
 @media screen and (min-width: 700px) {
+  main {
+    background-image: none;
+    background-color: #0c122c;
+    position: relative;
+  }
+  main::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background: url(/images/bg-desktop.png) no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 50vh;
+    width: 100vw;
+    z-index: 0;
+  }
   main section.container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-width: 1200px;
-    outline: 1px solid red;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 900px;
+  }
+  main section.container div.first-item, main section.container div.second-item {
+    width: 45%;
+    max-width: 400px;
+  }
+  main section.container div.first-item div.icons {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=main.css.map */
