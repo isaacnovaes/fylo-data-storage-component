@@ -24,6 +24,7 @@
             z-index: 2;
             width: 90%;
             max-width: 900px;
+            overflow: hidden;
 
             div.first-item, div.second-item{
                 width: 45%;
@@ -31,11 +32,27 @@
             }
 
             div.first-item {
+
+                animation: move-fromleft .8s .5s both;
                 div.icons {
                     width: 70%;
                 }
             }
+
+            div.second-item{
+                animation: move-fromright 1s 1s both;
+            }
         }
+    }
+
+    @keyframes move-fromleft {
+        from {transform: translateX(-50vw);}
+        to {transform: translateX(0);}       
+    }
+
+    @keyframes move-fromright {
+        from {transform: translateX(50vw);}
+        to {transform: translateX(0);}       
     }
 
 }

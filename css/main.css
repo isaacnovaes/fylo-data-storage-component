@@ -97,6 +97,7 @@ main section.container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  overflow: hidden;
 }
 
 main section.container div.first-item {
@@ -116,6 +117,8 @@ main section.container div.first-item {
       justify-content: space-around;
   border-radius: 10px;
   border-top-right-radius: 100px;
+  -webkit-animation: move-fromup .8s .5s both;
+          animation: move-fromup .8s .5s both;
 }
 
 main section.container div.first-item > a {
@@ -164,6 +167,8 @@ main section.container div.second-item {
   border-top-right-radius: 100px;
   border-radius: 10px;
   position: relative;
+  -webkit-animation: move-fromdown 1s 1s both;
+          animation: move-fromdown 1s 1s both;
 }
 
 main section.container div.second-item div.data-info {
@@ -217,6 +222,8 @@ main section.container div.second-item div.data-number {
   position: absolute;
   bottom: -30px;
   left: 27.5%;
+  -webkit-animation: data-opacity 2s 2.1s both;
+          animation: data-opacity 2s 2.1s both;
 }
 
 main section.container div.second-item div.data-number p {
@@ -231,6 +238,68 @@ main section.container div.second-item div.data-number p strong {
   font-size: xx-large;
   color: #0c122c;
   margin-right: 20px;
+}
+
+@-webkit-keyframes data-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes data-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes move-fromup {
+  from {
+    -webkit-transform: translateY(-80vw);
+            transform: translateY(-80vw);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-fromup {
+  from {
+    -webkit-transform: translateY(-80vw);
+            transform: translateY(-80vw);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes move-fromdown {
+  from {
+    -webkit-transform: translateY(80vw);
+            transform: translateY(80vw);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-fromdown {
+  from {
+    -webkit-transform: translateY(80vw);
+            transform: translateY(80vw);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -265,13 +334,62 @@ main section.container div.second-item div.data-number p strong {
     z-index: 2;
     width: 90%;
     max-width: 900px;
+    overflow: hidden;
   }
   main section.container div.first-item, main section.container div.second-item {
     width: 45%;
     max-width: 400px;
   }
+  main section.container div.first-item {
+    -webkit-animation: move-fromleft .8s .5s both;
+            animation: move-fromleft .8s .5s both;
+  }
   main section.container div.first-item div.icons {
     width: 70%;
+  }
+  main section.container div.second-item {
+    -webkit-animation: move-fromright 1s 1s both;
+            animation: move-fromright 1s 1s both;
+  }
+  @-webkit-keyframes move-fromleft {
+    from {
+      -webkit-transform: translateX(-50vw);
+              transform: translateX(-50vw);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes move-fromleft {
+    from {
+      -webkit-transform: translateX(-50vw);
+              transform: translateX(-50vw);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes move-fromright {
+    from {
+      -webkit-transform: translateX(50vw);
+              transform: translateX(50vw);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes move-fromright {
+    from {
+      -webkit-transform: translateX(50vw);
+              transform: translateX(50vw);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
   }
 }
 /*# sourceMappingURL=main.css.map */
