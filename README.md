@@ -70,34 +70,17 @@ input[type=range]{
                         width: 20px;
                         cursor: pointer;    
                         background-color: white; 
-                        border-radius: 10px;  
-                     
+                        border-radius: 10px;                       
                         position: relative;
                         z-index: 2;
                         //Here, the thumb is styled
                     }
 }
 ```
-Also, although I don't know JS, I wrote a few lines of JS so that the input range value could be displayed automatically as it changes upon user action. 
-```js
-var slider = document.getElementById("slider");
-      var progressBar = document.getElementById("progressBar");
-      progressBar.style.width = .082*slider.value + "%";
-      var showValue1 = document.getElementById("showValue1");
-      var showValue2 = document.getElementById("showValue2");
-
-      slider.oninput = function () {
-
-        showValue1.innerHTML = slider.value;
-        showValue2.innerHTML = 1000-slider.value;
-        progressBar.style.width = slider.value*.083 + .05 + "%" ;
-        
-      }
-```
 
 ### Continued development
 
-This challenge was pretty easy to complete, however, without JS, I wouldn't be able to finish it. Therefore, I plan to use all my summer holiday to study JS full time.
+This challenge was pretty easy to complete, however, I felt that if I knew JS, I would make the website much more interactive. Therefore, I am more and more stimulated to start studying JS, which will happen when my exam period finishes at my university.
 
 
 
