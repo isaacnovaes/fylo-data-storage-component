@@ -70,6 +70,7 @@ html::-webkit-scrollbar-thumb:active {
 
 main {
   height: 100vh;
+  min-height: 800px;
   background: url(/images/bg-mobile.png) no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -81,12 +82,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 main section.container {
-  height: 60%;
-  width: 80%;
-  max-width: 370px;
+  height: 70%;
+  width: 90%;
+  max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +137,7 @@ main section.container div.first-item > a img {
 
 main section.container div.first-item div.icons {
   margin-left: 10%;
-  width: 50%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +149,7 @@ main section.container div.first-item div.icons {
 main section.container div.first-item div.icons a {
   background-color: #0c122c;
   border-radius: 10px;
-  padding: 15px;
+  padding: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,41 +184,51 @@ main section.container div.second-item div.data-info p {
   font-weight: 400;
 }
 
-main section.container div.second-item div.data-info input[type=range] {
+main section.container div.second-item div.data-info div.input-section {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+
+main section.container div.second-item div.data-info div.input-section input[type=range] {
   display: block;
   -webkit-appearance: none;
   width: 80%;
-  height: 20px;
-  margin: 20px auto;
+  height: 15px;
+  margin: 10% auto;
   border-radius: 10px;
   background-color: #0c122c;
 }
 
-main section.container div.second-item div.data-info input[type=range]::-webkit-slider-thumb {
+main section.container div.second-item div.data-info div.input-section input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   cursor: pointer;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 50%;
   position: relative;
   z-index: 2;
 }
 
-main section.container div.second-item div.data-info #progressBar {
-  height: 20px;
+main section.container div.second-item div.data-info div.input-section #progressBar {
+  width: 66%;
+  height: 11px;
+  margin: 0 auto;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
   background: linear-gradient(to right, #ffa399, #ff4d97);
   border-radius: 10px;
-  -webkit-transform: translate(39px, -39px);
-          transform: translate(39px, -39px);
+  position: absolute;
+  top: 1.8px;
+  left: 11%;
   z-index: 1;
 }
 
-main section.container div.second-item div.data-number {
+main section.container div.data-number {
   background-color: white;
   width: 50%;
+  max-width: 170px;
   padding: 18px 12px;
   border-radius: 10px;
   position: absolute;
@@ -226,14 +238,14 @@ main section.container div.second-item div.data-number {
           animation: data-opacity 2s 2.1s both;
 }
 
-main section.container div.second-item div.data-number p {
+main section.container div.data-number p {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: small;
   color: #848794;
 }
 
-main section.container div.second-item div.data-number p strong {
+main section.container div.data-number p strong {
   font-weight: 700;
   font-size: xx-large;
   color: #0c122c;
@@ -334,22 +346,84 @@ main section.container div.second-item div.data-number p strong {
     z-index: 2;
     width: 90%;
     max-width: 900px;
-    overflow: hidden;
-  }
-  main section.container div.first-item, main section.container div.second-item {
-    width: 45%;
-    max-width: 400px;
   }
   main section.container div.first-item {
+    width: 39%;
+    max-width: 480px;
     -webkit-animation: move-fromleft .8s .5s both;
             animation: move-fromleft .8s .5s both;
   }
   main section.container div.first-item div.icons {
-    width: 70%;
+    width: 60%;
+    max-width: 200px;
+  }
+  main section.container div.first-item div.icons a {
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  main section.container div.first-item div.icons a:hover {
+    background-color: rgba(15, 30, 97, 0.842);
   }
   main section.container div.second-item {
+    width: 60%;
+    top: 41.5px;
     -webkit-animation: move-fromright 1s 1s both;
             animation: move-fromright 1s 1s both;
+  }
+  main section.container div.second-item div.data-info {
+    padding-left: 30px;
+  }
+  main section.container div.second-item div.data-info p {
+    text-align: left;
+  }
+  main section.container div.second-item div.data-info div.input-section {
+    margin-left: 0;
+    width: 95%;
+  }
+  main section.container div.second-item div.data-info div.input-section #progressBar {
+    left: 2px;
+    width: 75.8%;
+  }
+  main section.container div.second-item div.data-info div.input-section #progressBar::before {
+    content: "0 GB";
+    color: white;
+    opacity: .7;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    display: block;
+    width: 50px;
+    height: 20px;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  main section.container div.second-item div.data-info div.input-section #progressBar::after {
+    content: "1000 GB";
+    color: white;
+    opacity: .7;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    display: block;
+    width: 100px;
+    height: 20px;
+    position: relative;
+    left: 98%;
+  }
+  main section.container div.second-item div.data-number {
+    position: absolute;
+    top: -50px;
+    left: unset;
+    right: 13%;
+    height: 70px;
+    width: 155px;
+  }
+  main section.container div.second-item div.data-number::after {
+    content: "";
+    border-width: 20px;
+    border-style: solid;
+    border-color: white white transparent transparent;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
   }
   @-webkit-keyframes move-fromleft {
     from {
@@ -373,8 +447,8 @@ main section.container div.second-item div.data-number p strong {
   }
   @-webkit-keyframes move-fromright {
     from {
-      -webkit-transform: translateX(50vw);
-              transform: translateX(50vw);
+      -webkit-transform: translateX(60vw);
+              transform: translateX(60vw);
     }
     to {
       -webkit-transform: translateX(0);
@@ -383,8 +457,8 @@ main section.container div.second-item div.data-number p strong {
   }
   @keyframes move-fromright {
     from {
-      -webkit-transform: translateX(50vw);
-              transform: translateX(50vw);
+      -webkit-transform: translateX(60vw);
+              transform: translateX(60vw);
     }
     to {
       -webkit-transform: translateX(0);
