@@ -1,5 +1,7 @@
 # Frontend Mentor - Fylo data storage component solution
 
+![Desktop](/design/desktop.png)
+
 This is a solution to the [Fylo data storage component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n). 
 
 ## Table of contents
@@ -25,13 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile](./screenshot.jpg)
-![Desktop](./screenshot.jpg)
+[Mobile](/design/mobile.png)
+
+[Desktop](/design/desktop.png)
 
 
 ### Links
 
-- [Live Site](https://your-live-site-url.com)
+- [Live Site](https://fylo-data-storage-dark.netlify.app)
 
 ## My process
 
