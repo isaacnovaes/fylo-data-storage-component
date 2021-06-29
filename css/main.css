@@ -381,8 +381,8 @@ main section.container div.data-number p strong {
     width: 95%;
   }
   main section.container div.second-item div.data-info div.input-section #progressBar {
-    left: 2px;
-    width: 75.8%;
+    left: 47px;
+    width: 65.5%;
   }
   main section.container div.second-item div.data-info div.input-section #progressBar::before {
     content: "0 GB";
